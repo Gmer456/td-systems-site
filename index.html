@@ -2,136 +2,152 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shadow Wall – Cybersecurity Solutions</title>
-
-    <!-- Inter font (optional, still black‑and‑white) -->
+    <title>Shadowall – Cybersecurity Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font (optional) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header id="hero">
+<header id="header">
     <nav class="container">
-        <a href="#" class="logo">Shadow Wall</a>
+        <a href="#" class="logo">Shadowall</a>
         <ul class="nav-links">
             <li><a href="#services">Services</a></li>
-            <li><a href="#wall">The Wall</a></li>
-            <li><a href="#why">Why Us</a></li>
+            <li><a href="#pricing">Pricing</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <button class="nav-toggle" aria-label="Toggle navigation">
-            <span></span><span></span><span></span>
-        </button>
     </nav>
-
-    <div class="hero-content container">
-        <h1>Guard Your Digital Frontier</h1>
-        <p>Black‑and‑white protection against eyes, viruses, malware and hackers.</p>
-        <a href="#contact" class="cta-btn">Request a Free Assessment</a>
-    </div>
 </header>
 
 <main>
 
-    <!-- Services Section -->
-    <section id="services" class="section container">
-        <h2>Our Services</h2>
-        <div class="cards">
-            <article class="card">
-                <h3>Penetration Testing</h3>
-                <p>Find hidden weaknesses before attackers do.</p>
-            </article>
-            <article class="card">
-                <h3>Managed Detection & Response</h3>
-                <p>24/7 monitoring, rapid triage, and containment.</p>
-            </article>
-            <article class="card">
-                <h3>Security Audits & Compliance</h3>
-                <p>GDPR, ISO 27001, SOC 2 – we keep you compliant.</p>
-            </article>
-            <article class="card">
-                <h3>Incident Response Planning</h3>
-                <p>Playbooks, tabletop drills, and fast breach mitigation.</p>
-            </article>
+    <!-- HERO -->
+    <section id="hero" class="section hero-section">
+        <div class="container">
+            <h1 class="fade-in">Protect Your Digital World</h1>
+            <p class="fade-in delay-1">Advanced cybersecurity solutions for businesses of any size.</p>
+            <a href="#contact" class="btn-primary fade-in delay-2">Get a Free Consultation</a>
         </div>
     </section>
 
-    <!-- THE WALL SECTION -->
-    <section id="wall" class="section alt-bg">
-        <div class="container wall-wrapper">
-            <div class="wall-side user-side">
-                <h2>User Side</h2>
-                <p>Secure devices, strong passwords, regular updates.</p>
-                <div class="avatar">
-                    <svg viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="45" stroke="#555" stroke-width="5" fill="none"/>
-                        <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
-                              font-size="30" fill="#555">U</text>
-                    </svg>
-                </div>
-            </div>
+    <!-- ABOUT -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="fade-in">Who We Are</h2>
+            <p class="fade-in delay-1">
+                Shadowall is a boutique cybersecurity firm specializing in threat detection,
+                incident response, and security architecture. Our team combines years of
+                experience with cutting‑edge technology to keep your assets safe.
+            </p>
+        </div>
+    </section>
 
-            <div class="wall-divider"></div>
+    <!-- SERVICES -->
+    <section id="services" class="section services-section">
+        <div class="container">
+            <h2 class="fade-in">Our Services</h2>
+            <div class="cards">
 
-            <div class="wall-side internet-side">
-                <h2>Internet Side</h2>
-                <p>Eyes, viruses, malware, hackers – all trying to cross.</p>
+                <article class="card fade-in delay-1">
+                    <h3>Vulnerability Assessment</h3>
+                    <p>Identify weaknesses before attackers do.</p>
+                </article>
 
-                <!-- Eyes -->
-                <div class="eye eye-1"><svg viewBox="0 0 60 30"><ellipse cx="30" cy="15" rx="28" ry="13" fill="#fff" stroke="#555" stroke-width="2"/><circle cx="30" cy="15" r="6" fill="#555"/></svg></div>
-                <div class="eye eye-2"><svg viewBox="0 0 60 30"><ellipse cx="30" cy="15" rx="28" ry="13" fill="#fff" stroke="#555" stroke-width="2"/><circle cx="30" cy="15" r="6" fill="#555"/></svg></div>
+                <article class="card fade-in delay-2">
+                    <h3>Penetration Testing</h3>
+                    <p>Real‑world attack simulations to validate defenses.</p>
+                </article>
 
-                <!-- Virus -->
-                <div class="virus"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="30" fill="none" stroke="#555" stroke-width="4"/><line x1="40" y1="10" x2="40" y2="70" stroke="#555" stroke-width="4"/><line x1="10" y1="40" x2="70" y2="40" stroke="#555" stroke-width="4"/></svg></div>
+                <article class="card fade-in delay-3">
+                    <h3>Managed Detection & Response (MDR)</h3>
+                    <p>24/7 monitoring and rapid incident containment.</p>
+                </article>
 
-                <!-- Malware (binary) -->
-                <div class="malware"><pre>01010100 01100101 01110011 01110100</pre></div>
+                <article class="card fade-in delay-4">
+                    <h3>Security Architecture Design</h3>
+                    <p>Build secure foundations for new projects.</p>
+                </article>
 
-                <!-- Hacker silhouette -->
-                <div class="hacker"><svg viewBox="0 0 100 100"><path d="M20 80 L40 20 L60 80 Z" fill="none" stroke="#555" stroke-width="4"/><circle cx="50" cy="30" r="10" fill="none" stroke="#555" stroke-width="4"/></svg></div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <section id="why" class="section">
+    <!-- PRICING -->
+    <section id="pricing" class="section pricing-section">
         <div class="container">
-            <h2>Why Choose Shadow Wall?</h2>
-            <ul class="features">
-                <li><strong>Expert Team:</strong> Certified ethical hackers and analysts.</li>
-                <li><strong>Zero‑Trust Design:</strong> Assume breach, protect everything.</li>
-                <li><strong>Transparent Reporting:</strong> Clear, actionable findings.</li>
-                <li><strong>Fast Turnaround:</strong> Most projects start within 48 hours.</li>
-            </ul>
+            <h2 class="fade-in">Pricing Plans</h2>
+            <div class="price-cards">
+
+                <article class="price-card fade-in delay-1">
+                    <h3>Starter</h3>
+                    <p class="price">$499<span>/project</span></p>
+                    <ul>
+                        <li>Vulnerability Scan</li>
+                        <li>Basic Report</li>
+                        <li>Email Support</li>
+                    </ul>
+                    <a href="#contact" class="btn-secondary">Choose</a>
+                </article>
+
+                <article class="price-card featured fade-in delay-2">
+                    <h3>Professional</h3>
+                    <p class="price">$1,299<span>/project</span></p>
+                    <ul>
+                        <li>Full Pen‑Test</li>
+                        <li>Detailed Remediation Guide</li>
+                        <li>Phone & Email Support</li>
+                        <li>30‑day Follow‑up</li>
+                    </ul>
+                    <a href="#contact" class="btn-secondary">Choose</a>
+                </article>
+
+                <article class="price-card fade-in delay-3">
+                    <h3>Enterprise</h3>
+                    <p class="price">Custom<span>/quote</span></p>
+                    <ul>
+                        <li>Managed Detection & Response</li>
+                        <li>Security Architecture Consulting</li>
+                        <li>Dedicated Account Manager</li>
+                        <li>On‑site Training</li>
+                    </ul>
+                    <a href="#contact" class="btn-secondary">Contact Us</a>
+                </article>
+
+            </div>
         </div>
     </section>
 
-    <!-- Contact Form -->
-    <section id="contact" class="section alt-bg">
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section testimonials-section">
         <div class="container">
-            <h2>Start Protecting Today</h2>
-            <form id="contact-form" novalidate>
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" required placeholder="Your name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" required placeholder="you@example.com">
-                </div>
-                <div class="form-group">
-                    <label for="company">Company</label>
-                    <input type="text" id="company" placeholder="Your organization">
-                </div>
-                <div class="form-group">
-                    <label for="message">How can we help?</label>
-                    <textarea id="message" rows="4" required placeholder="Brief description of your needs"></textarea>
-                </div>
-                <button type="submit" class="cta-btn">Send Request</button>
-                <p id="form-status" class="status-msg"></p>
+            <h2 class="fade-in">What Clients Say</h2>
+            <div class="testimonial-cards">
+
+                <article class="testimonial fade-in delay-1">
+                    <p>"Shadowall uncovered critical gaps we never knew existed. Their response time was lightning fast."</p>
+                    <cite>— Alex M., CTO, FinTechCo</cite>
+                </article>
+
+                <article class="testimonial fade-in delay-2">
+                    <p>"Their MDR service gives us peace of mind 24/7. Highly recommended."</p>
+                    <cite>— Priya R., IT Director, HealthSecure</cite>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="fade-in">Get In Touch</h2>
+            <form class="fade-in delay-1" id="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <textarea name="message" rows="4" placeholder="How can we help?" required></textarea>
+                <button type="submit" class="btn-primary">Send Message</button>
             </form>
         </div>
     </section>
@@ -140,8 +156,8 @@
 
 <footer class="footer">
     <div class="container">
-        <p>&copy; <span id="year"></span> Shadow Wall – All Rights Reserved.</p>
-        <p><a href="mailto:info@shadowwall.io">info@shadowwall.io</a></p>
+        <p>&copy; 2026 Shadowall – All Rights Reserved.</p>
+        <p>Designed with ❤️ by Shadowall.</p>
     </div>
 </footer>
 
