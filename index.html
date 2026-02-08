@@ -1,188 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>T&D Systems | Containment & Cyber Operations</title>
-<meta name="description" content="T&D Systems — Secure, Contain, Protect. High-security cybersecurity and containment operations.">
-<style>
-:root{
-  --bg:#0b0c10;
-  --panel:#1b1c20;
-  --text:#e0e0e0;
-  --accent:#00ffff;
-  --muted:#7a7a7a;
-}
-
-/* Reset */
-*{margin:0; padding:0; box-sizing:border-box;}
-body{ font-family:'Courier New', monospace; background:var(--bg); color:var(--text); overflow-x:hidden; }
-
-/* Header */
-header{
-  position:sticky; top:0; z-index:100;
-  background:rgba(11,12,16,0.95); backdrop-filter:blur(5px);
-  border-bottom:1px solid rgba(255,255,255,0.05);
-  display:flex; justify-content:space-between; align-items:center;
-  padding:1rem 2rem;
-}
-.logo{ font-weight:bold; font-size:1.8rem; color:var(--accent); letter-spacing:2px; }
-nav a{
-  color:var(--muted); text-decoration:none; margin-left:1.5rem; font-weight:500;
-  position:relative; transition:0.3s;
-}
-nav a::after{
-  content:""; position:absolute; left:0; bottom:-2px; width:0%; height:2px; background:var(--accent);
-  transition:0.3s;
-}
-nav a:hover::after{ width:100%; }
-nav a:hover{ color:var(--text); }
-
-/* Hero Section */
-.hero{
-  position:relative; height:90vh; display:flex; justify-content:center; align-items:center;
-  text-align:center; padding:0 2rem; overflow:hidden;
-}
-.hero h1{ font-size:3rem; margin-bottom:1rem; }
-.hero p{ font-size:1.2rem; color:var(--muted); margin-bottom:2rem; }
-
-/* Buttons */
-.btn{
-  display:inline-block; padding:0.7rem 1.5rem; border-radius:8px; font-weight:bold; text-decoration:none; margin-right:1rem; transition:0.3s;
-}
-.btn.primary{
-  background:linear-gradient(90deg,var(--accent),#00ff99); color:#000;
-}
-.btn.primary:hover{ transform:scale(1.05); box-shadow:0 0 20px var(--accent);}
-.btn.secondary{
-  border:1px solid var(--accent); color:var(--accent);
-}
-.btn.secondary:hover{ transform:scale(1.05); box-shadow:0 0 10px var(--accent);}
-
-/* Terminal Background */
-.terminal-bg{
-  position:absolute; top:0; left:0; width:100%; height:100%;
-  background:#0b0c10; color:var(--accent); font-family:'Courier New', monospace; font-size:1rem;
-  overflow:hidden; z-index:0; padding:2rem; opacity:0.2;
-}
-.terminal-bg span{ display:block; white-space:pre; }
-
-/* Sections */
-section{ max-width:1000px; margin:auto; padding:4rem 2rem; opacity:0; transform:translateY(40px); transition:1s; }
-section.active{ opacity:1; transform:translateY(0);}
-section h2{ font-size:2rem; margin-bottom:1rem; color:var(--accent);}
-.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.5rem;}
-.card{
-  background:var(--panel); border-radius:12px; padding:1.5rem;
-  transition:0.5s; border:1px solid rgba(255,255,255,0.05);
-}
-.card:hover{ transform:translateY(-5px); border-color:var(--accent); }
-.card h3{ margin-bottom:0.5rem; }
-.card p{ color:var(--muted); font-size:0.95rem;}
-
-/* Footer */
-footer{ text-align:center; padding:2rem; border-top:1px solid rgba(255,255,255,0.05); color:var(--muted);}
-
-/* Animations */
-@keyframes fadeUp{0%{opacity:0;transform:translateY(20px);}100%{opacity:1;transform:translateY(0);}}
-
-/* Responsive */
-@media(max-width:768px){ .hero h1{ font-size:2.2rem; } .hero p{ font-size:1rem; } }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T&D Systems</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header>
-  <div class="logo">T&D</div>
-  <nav>
-    <a href="#operations">Operations</a>
-    <a href="#containment">Containment</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <header>
+    <div class="logo">T&D Systems</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<div class="hero">
-  <div style="position:relative; z-index:1;">
-    <h1>Secure. Contain. Protect.</h1>
-    <p>T&D Systems — High-security containment & cyber operations</p>
-    <a href="#contact" class="btn primary">Engage</a>
-    <a href="#operations" class="btn secondary">Operations</a>
-  </div>
-  <div class="terminal-bg" id="terminal"></div>
-</div>
+  <section class="hero">
+    <h1>T&D Systems</h1>
+    <p>Professional cybersecurity solutions — protecting your networks and retrieving critical data efficiently.</p>
+  </section>
 
-<section id="operations">
-  <h2>Cyber Operations</h2>
-  <div class="grid">
-    <div class="card"><h3>Threat Monitoring</h3><p>Continuous monitoring and real-time threat analysis.</p></div>
-    <div class="card"><h3>Network Defense</h3><p>Advanced firewalls, intrusion detection, and hardening.</p></div>
-    <div class="card"><h3>Penetration Testing</h3><p>Simulated attacks to test and improve system security.</p></div>
-    <div class="card"><h3>Consulting</h3><p>Expert guidance for high-security systems and protocols.</p></div>
-  </div>
-</section>
+  <section id="services">
+    <h2>What We Do</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Network & Device Protection</h3>
+        <p>Securing all your endpoints and networks against unauthorized access and threats.</p>
+      </div>
+      <div class="card">
+        <h3>Data Search & Retrieval</h3>
+        <p>Fast, precise data recovery and organization for enterprise and personal systems.</p>
+      </div>
+      <div class="card">
+        <h3>Threat Monitoring</h3>
+        <p>Continuous surveillance to detect and neutralize potential cybersecurity threats.</p>
+      </div>
+    </div>
+  </section>
 
-<section id="containment">
-  <h2>Containment Projects</h2>
-  <div class="grid">
-    <div class="card"><h3>Project Alpha</h3><p>High-priority digital containment operations.</p></div>
-    <div class="card"><h3>Project Omega</h3><p>Experimental threat isolation and mitigation.</p></div>
-    <div class="card"><h3>Project Sigma</h3><p>Critical system defense and anomaly neutralization.</p></div>
-    <div class="card"><h3>Project Delta</h3><p>Infrastructure security reinforcement.</p></div>
-  </div>
-</section>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>T&D Systems provides minimalistic, professional cybersecurity solutions focused on efficiency, safety, and reliability.</p>
+  </section>
 
-<section id="about">
-  <h2>About T&D Systems</h2>
-  <p style="color:var(--muted); max-width:700px;">Founded to deliver uncompromising cybersecurity and containment services, T&D Systems operates at the intersection of digital defense and high-security operations.</p>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="card">
+  <section id="contact">
+    <h2>Contact</h2>
     <p>Email: <strong>contact@tdsystems.com</strong></p>
-    <p>Location: United States</p>
-  </div>
-</section>
+  </section>
 
-<footer>© 2026 T&D Systems. All rights reserved.</footer>
+  <footer>
+    © 2026 T&D Systems
+  </footer>
 
-<script>
-// Terminal commands animation
-const commands = [
-  "init_containment_protocol --alpha",
-  "firewall_status --check",
-  "scan_network --priority=high",
-  "isolate_anomaly --id=047",
-  "system_integrity --verify",
-  "echo 'T&D SYSTEMS ACTIVE'"
-];
-const terminal = document.getElementById('terminal');
-let i=0;
-function typeCommand(){
-  if(i>=commands.length)i=0;
-  const line=document.createElement('span');
-  line.textContent=`$ ${commands[i]}`;
-  terminal.appendChild(line);
-  terminal.scrollTop = terminal.scrollHeight;
-  i++;
-  setTimeout(typeCommand,1200);
-}
-typeCommand();
-
-// Scroll reveal for sections
-const sections = document.querySelectorAll('section');
-function revealSections(){
-  sections.forEach(sec=>{
-    const top = sec.getBoundingClientRect().top;
-    if(top < window.innerHeight - 100){
-      sec.classList.add('active');
-    }
-  });
-}
-window.addEventListener('scroll',revealSections);
-revealSections();
-</script>
-
+  <script src="js/main.js"></script>
 </body>
 </html>
