@@ -1,6 +1,6 @@
-/* -------------------------------------------------
-   Global Settings
---------------------------------------------------- */
+/* ==============================================================
+   Global reset & typography
+   ============================================================== */
 *,
 *::before,
 *::after {
@@ -8,9 +8,7 @@
     margin: 0;
     padding: 0;
 }
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
@@ -18,28 +16,25 @@ body {
     color: #eee;
 }
 
-/* -------------------------------------------------
-   Layout Helpers
---------------------------------------------------- */
+/* ==============================================================
+   Layout helpers
+   ============================================================== */
 .container {
     width: min(90%, 1200px);
     margin: 0 auto;
     padding: 2rem 0;
 }
-.section {
-    padding: 4rem 0;
-    text-align: center;
-}
+.section { padding: 4rem 0; text-align: center; }
 
-/* -------------------------------------------------
-   Header / Navigation
---------------------------------------------------- */
+/* ==============================================================
+   Header / Nav
+   ============================================================== */
 header {
     position: sticky;
     top: 0;
     background: #000;
-    z-index: 1000;
     border-bottom: 2px solid #c00;
+    z-index: 1000;
 }
 nav {
     display: flex;
@@ -65,42 +60,45 @@ nav {
 }
 .nav-links a:hover { color: #c00; }
 
-/* -------------------------------------------------
-   Hero Section
---------------------------------------------------- */
+/* ==============================================================
+   Hero
+   ============================================================== */
 .hero-section {
-    background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+    /* You can swap the URL for a local file: url('assets/hero-bg.jpg') */
+    background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1500&q=80')
+                center/cover no-repeat;
     color: #fff;
     height: 85vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-shadow: 0 2px 4px rgba(0,0,0,.6);
 }
 .hero-section h1 { font-size: 3rem; }
 .hero-section p { font-size: 1.25rem; margin: 1rem 0; }
+
 .btn-primary {
     background: #c00;
     color: #fff;
     padding: .75rem 1.5rem;
     border: none;
     border-radius: 4px;
+    font-weight: 600;
     cursor: pointer;
     text-decoration: none;
-    font-weight: 600;
     transition: background .2s;
 }
 .btn-primary:hover { background: #a00; }
 
-/* -------------------------------------------------
-   About Section
---------------------------------------------------- */
+/* ==============================================================
+   About
+   ============================================================== */
 .about-section { background: #222; }
 
-/* -------------------------------------------------
-   Cards (Services, Pricing, Testimonials)
---------------------------------------------------- */
+/* ==============================================================
+   Card grids (services, pricing, testimonials)
+   ============================================================== */
 .cards,
 .price-cards,
 .testimonial-cards {
@@ -143,11 +141,11 @@ nav {
 .price-card .price span { font-size: .6em; color: #aaa; }
 .price-card ul { list-style: none; margin: 1rem 0; }
 .price-card li { margin: .4rem 0; }
+
 .btn-secondary {
     display: inline-block;
     margin-top: .5rem;
     padding: .5rem 1rem;
-    background: transparent;
     border: 2px solid #c00;
     color: #c00;
     border-radius: 4px;
@@ -160,9 +158,9 @@ nav {
     color: #fff;
 }
 
-/* -------------------------------------------------
-   Contact Form
---------------------------------------------------- */
+/* ==============================================================
+   Contact form
+   ============================================================== */
 .contact-section form {
     max-width: 600px;
     margin: 0 auto;
@@ -178,14 +176,10 @@ nav {
     background: #222;
     color: #eee;
 }
-.contact-section button {
-    width: fit-content;
-    margin: 0 auto;
-}
 
-/* -------------------------------------------------
+/* ==============================================================
    Footer
---------------------------------------------------- */
+   ============================================================== */
 .footer {
     background: #000;
     color: #777;
@@ -194,13 +188,14 @@ nav {
     border-top: 2px solid #c00;
 }
 
-/* -------------------------------------------------
-   Animations (Fade‑in on scroll)
---------------------------------------------------- */
+/* ==============================================================
+   Fade‑in animation (triggered via JS)
+   ============================================================== */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn 0.8s forwards;
+    animation-play-state: paused;   /* will be started by IntersectionObserver */
 }
 .delay-1 { animation-delay: 0.2s; }
 .delay-2 { animation-delay: 0.4s; }
@@ -214,10 +209,10 @@ nav {
     }
 }
 
-/* -------------------------------------------------
-   Responsive Tweaks
---------------------------------------------------- */
+/* ==============================================================
+   Responsive tweaks
+   ============================================================== */
 @media (max-width: 768px) {
     .hero-section h1 { font-size: 2.2rem; }
-    .nav-links { display: none; } /* Simplify for demo – you could add a burger menu */
+    .nav-links { display: none; }   /* simple demo – you could add a burger menu later */
 }
