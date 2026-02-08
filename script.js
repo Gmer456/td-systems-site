@@ -1,5 +1,5 @@
 /* -------------------------------------------------
-   Simple interactivity for Shadow Wall site
+   Simple interactivity for Shadow Wall (black/white)
    ------------------------------------------------- */
 
 /* 1️⃣ Mobile navigation toggle */
@@ -12,7 +12,7 @@ if (navToggle && navLinks) {
     });
 }
 
-/* 2️⃣ Update footer year automatically */
+/* 2️⃣ Auto‑update footer year */
 document.getElementById('year').textContent = new Date().getFullYear();
 
 /* 3️⃣ Contact form stub – replace with real endpoint */
@@ -23,12 +23,12 @@ if (form) {
     form.addEventListener('submit', e => {
         e.preventDefault();
 
-        // Basic front‑end validation
+        // Simple front‑end validation
         const required = form.querySelectorAll('[required]');
         let allValid = true;
         required.forEach(el => {
             if (!el.value.trim()) {
-                el.style.borderColor = '#ff5722';
+                el.style.borderColor = '#fff';
                 allValid = false;
             } else {
                 el.style.borderColor = '';
@@ -37,13 +37,13 @@ if (form) {
 
         if (!allValid) {
             statusMsg.textContent = 'Please fill in all required fields.';
-            statusMsg.style.color = '#ff5722';
+            statusMsg.style.color = '#fff';
             return;
         }
 
-        // Simulated success – replace with fetch/AJAX call
-        statusMsg.textContent = 'Thank you! We’ll get back to you shortly.';
-        statusMsg.style.color = '#4caf50';
+        // Simulated success – swap with fetch/AJAX later
+        statusMsg.textContent = 'Thank you! We’ll reply shortly.';
+        statusMsg.style.color = '#fff';
         form.reset();
     });
 }
