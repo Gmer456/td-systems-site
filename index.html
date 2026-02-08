@@ -1,208 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShadowWall | Cybersecurity</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #0a0a0a;
-            color: #fff;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* Header */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 2rem 5%;
-            background: #111;
-            border-bottom: 1px solid #222;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        header h1 {
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-        nav a {
-            margin-left: 2rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #00ffff;
-        }
-
-        /* Hero Section */
-        .hero {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            height: 100vh;
-            padding: 0 5%;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin-bottom: 2rem;
-        }
-        .hero button {
-            padding: 0.8rem 2rem;
-            border: 1px solid #00ffff;
-            background: transparent;
-            color: #00ffff;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        .hero button:hover {
-            background: #00ffff;
-            color: #0a0a0a;
-        }
-
-        /* Typing animation */
-        .typing {
-            border-right: 2px solid #00ffff;
-            white-space: nowrap;
-            overflow: hidden;
-            font-weight: 600;
-            font-size: 1.2rem;
-            width: 0;
-            animation: typing 3s steps(30) forwards, blink 0.7s step-end infinite;
-        }
-        @keyframes typing {
-            100% { width: 25ch; }
-        }
-        @keyframes blink {
-            50% { border-color: transparent; }
-        }
-
-        /* About Section */
-        .about {
-            padding: 5rem 5%;
-            background: #111;
-            border-top: 1px solid #222;
-        }
-        .about h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        .about p {
-            max-width: 700px;
-        }
-
-        /* Features Section */
-        .features {
-            padding: 5rem 5%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        .feature {
-            background: #111;
-            border: 1px solid #222;
-            padding: 2rem;
-            border-radius: 10px;
-            transition: transform 0.3s, border-color 0.3s;
-        }
-        .feature:hover {
-            transform: translateY(-10px);
-            border-color: #00ffff;
-        }
-        .feature h4 {
-            margin-bottom: 1rem;
-            color: #00ffff;
-        }
-
-        /* Footer */
-        footer {
-            padding: 2rem 5%;
-            text-align: center;
-            background: #111;
-            border-top: 1px solid #222;
-        }
-        footer p {
-            font-size: 0.9rem;
-            color: #888;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShadowWall | Cybersecurity Fortress</title>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+<header>
+    <h1>ShadowWall</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="features.html">Features</a>
+    </nav>
+</header>
 
-    <!-- Header -->
-    <header>
-        <h1>ShadowWall</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#features">Features</a>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
+<section class="hero">
+    <canvas id="cyber-bg"></canvas>
+    <div class="hero-content">
         <h2>Protecting Your Digital World</h2>
-        <p class="typing">We shield you from malware, hackers, and digital threats.</p>
-        <button onclick="scrollToAbout()">Learn More</button>
-    </section>
+        <p id="typing-text"></p>
+        <button onclick="scrollToFeatures()">Discover Our Features</button>
+    </div>
+</section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h3>About ShadowWall</h3>
-        <p>ShadowWall is a next-generation cybersecurity solution designed to protect individuals and businesses from digital threats. Our advanced technology detects malware, prevents intrusions, and keeps your online presence secure 24/7.</p>
-    </section>
+<footer>
+    <p>© 2026 ShadowWall. All rights reserved.</p>
+</footer>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="feature">
-            <h4>Malware Protection</h4>
-            <p>Real-time scanning and neutralization of viruses, trojans, and ransomware.</p>
-        </div>
-        <div class="feature">
-            <h4>Firewall Security</h4>
-            <p>Advanced firewall that blocks suspicious traffic and intrusion attempts.</p>
-        </div>
-        <div class="feature">
-            <h4>Privacy Shield</h4>
-            <p>Protect your personal data from trackers, phishing, and identity theft.</p>
-        </div>
-        <div class="feature">
-            <h4>Cloud Monitoring</h4>
-            <p>Keep your cloud assets safe with constant surveillance and threat alerts.</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 ShadowWall. All rights reserved.</p>
-    </footer>
-
-    <script>
-        function scrollToAbout() {
-            document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/cybersecurity-effects.js"></script>
 </body>
 </html>
+
