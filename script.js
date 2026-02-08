@@ -1,37 +1,32 @@
-/* -------------------------------------------------
-   IntersectionObserver – trigger fade‑in when
-   elements enter the viewport.
---------------------------------------------------- */
+/* -------------------------------------------------------------
+   IntersectionObserver – start fade‑in when elements scroll into view
+   ------------------------------------------------------------- */
 document.addEventListener('DOMContentLoaded', () => {
-    const observerOptions = {
-        threshold: 0.15
-    };
-
-    const fadeElems = document.querySelectorAll('.fade-in');
+    const observerOpts = { threshold: 0.15 };
+    const fadeEls = document.querySelectorAll('.fade-in');
 
     const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.style.animationPlayState = 'running';
-                obs.unobserve(entry.target);
+                obs.unobserve(entry.target);   // stop observing once animated
             }
         });
-    }, observerOptions);
+    }, observerOpts);
 
-    // Initially pause the animation; it will start when observed
-    fadeElems.forEach(el => {
+    fadeEls.forEach(el => {
         el.style.animationPlayState = 'paused';
         observer.observe(el);
     });
 
-    /* -------------------------------------------------
-       Simple contact form handler (demo only)
-    --------------------------------------------------- */
+    /* ---------------------------------------------------------
+       Demo contact‑form handler – replace with real backend later
+       --------------------------------------------------------- */
     const form = document.getElementById('contact-form');
     if (form) {
         form.addEventListener('submit', e => {
             e.preventDefault();
-            alert('Thanks! Your message has been received.');
+            alert('Thank you! Your message has been received.');
             form.reset();
         });
     }
