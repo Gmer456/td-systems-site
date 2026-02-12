@@ -1,33 +1,35 @@
-/* -------------------------------------------------------------
-   IntersectionObserver – start fade‑in when elements scroll into view
-   ------------------------------------------------------------- */
-document.addEventListener('DOMContentLoaded', () => {
-    const observerOpts = { threshold: 0.15 };
-    const fadeEls = document.querySelectorAll('.fade-in');
+// Load services dynamically
+fetch('services.json')
+  .then(response => response.json())
+  .then(data => {
+    const servicesContainer = document.getElementById('services-container');
+    const pricingContainer = document.getElementById('pricing-container');
 
-    const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.animationPlayState = 'running';
-                obs.unobserve(entry.target);   // stop observing once animated
-            }
-        });
-    }, observerOpts);
+    data.services.forEach(service => {
+      // Service card
+      const card = document.createElement('div');
+      card.className = 'service-card';
+      let featuresList = '<ul>';
+      service.features.forEach(f => { featuresList += `<li>${f}</li>`; });
+      featuresList += '</ul>';
+      card.innerHTML = `<h3>${service.title}</h3>${featuresList}`;
+      servicesContainer.appendChild(card);
 
-    fadeEls.forEach(el => {
-        el.style.animationPlayState = 'paused';
-        observer.observe(el);
+      // Pricing card
+      const pricingCard = document.createElement('div');
+      pricingCard.className = 'pricing-card';
+      let pricingList = '<ul>';
+      service.pricing.forEach(p => { pricingList += `<li>${p.type}: ${p.price}</li>`; });
+      pricingList += '</ul>';
+      pricingCard.innerHTML = `<h3>${service.title} Pricing</h3>${pricingList}`;
+      pricingContainer.appendChild(pricingCard);
     });
+  })
+  .catch(err => console.error('Error loading services:', err));
 
-    /* ---------------------------------------------------------
-       Demo contact‑form handler – replace with real backend later
-       --------------------------------------------------------- */
-    const form = document.getElementById('contact-form');
-    if (form) {
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            alert('Thank you! Your message has been received.');
-            form.reset();
-        });
-    }
+// Contact form (basic front-end submission)
+document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Thank you! Your message has been sent.');
+    this.reset();
 });
