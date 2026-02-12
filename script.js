@@ -1,3 +1,6 @@
+console.log("script.js loaded");
+
+
 // Remove loader after 1 second regardless
 window.addEventListener("load", function(){
     setTimeout(() => {
