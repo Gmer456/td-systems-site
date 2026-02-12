@@ -8,119 +8,130 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <img src="assets/logo.png" alt="BlackVector Logo" class="logo-img">
-            <h1>BlackVector Cybersecurity</h1>
-        </div>
-    </header>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
 
-    <main>
-        <!-- Business Description -->
-        <section class="description animate">
-            <p>BlackVector protects your digital life. We secure accounts, clean inboxes, remove data leaks, optimize computers, and safeguard your personal information. Professional, fast, and affordable cybersecurity services for individuals and small businesses.</p>
-        </section>
+    <!-- Background Canvas -->
+    <canvas id="bgCanvas"></canvas>
 
-        <!-- Services -->
-        <section id="services">
-            <h2 class="animate">Services</h2>
-            <div class="grid animate">
-                <div class="service-card">
-                    <h3>Online Accounts & Asset Protection</h3>
-                    <ul>
-                        <li>Two-Factor Authentication (2FA) setup</li>
-                        <li>Password hardening & manager setup</li>
-                        <li>Email, social, banking accounts secured</li>
-                        <li>Privacy & account recovery configuration</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <h3>Junk & Digital Cleanup</h3>
-                    <ul>
-                        <li>Inbox cleanup (spam & phishing)</li>
-                        <li>Data broker removal</li>
-                        <li>Email & password leak check</li>
-                        <li>Phone & device leak review</li>
-                        <li>Social profile privacy review</li>
-                        <li>Privacy guidance & ongoing tips</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <h3>Computer Speed & Performance Optimization</h3>
-                    <ul>
-                        <li>System cleanup & startup optimization</li>
-                        <li>Software updates</li>
-                        <li>Malware & spyware scan</li>
-                        <li>Browser & cache cleanup</li>
-                        <li>Performance tuning</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <h3>Account Security Audit & Reinforcement</h3>
-                    <ul>
-                        <li>Account audit for email, social, banking</li>
-                        <li>Password review & hardening</li>
-                        <li>Two-Factor Authentication verification</li>
-                        <li>Recovery & backup check</li>
-                        <li>Access review for unauthorized devices/apps</li>
-                        <li>Reinforcement recommendations</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <h3>Data Broker & Digital Footprint Cleanup</h3>
-                    <ul>
-                        <li>Email leak check</li>
-                        <li>Password leak check</li>
-                        <li>Account leak review</li>
-                        <li>Data broker removal</li>
-                        <li>Phone & device leak check</li>
-                        <li>Social profile security review</li>
-                        <li>Digital footprint guidance</li>
-                    </ul>
-                </div>
+    <!-- Main Content -->
+    <div id="mainContent" class="hidden">
+        <header>
+            <div class="header-container">
+                <img src="assets/logo.png" alt="BlackVector Logo" class="logo-img">
+                <h1>BlackVector Cybersecurity</h1>
             </div>
-        </section>
+        </header>
 
-        <!-- Pricing -->
-        <section id="pricing">
-            <h2 class="animate">Pricing</h2>
-            <div class="grid animate">
-                <div class="pricing-card">
-                    <h3>Accounts / Profiles</h3>
-                    <ul>
-                        <li>Single Account / Email / Profile – $50</li>
-                        <li>2–3 Accounts / Emails / Profiles – $90</li>
-                        <li>4–5 Accounts / Emails / Profiles – $140</li>
-                        <li>6+ Accounts / Emails / Profiles – Custom Quote</li>
-                    </ul>
+        <main>
+            <!-- Description -->
+            <section class="description animate">
+                <p>BlackVector protects your digital life. We secure accounts, clean inboxes, remove data leaks, optimize computers, and safeguard your personal information. Professional, fast, and affordable cybersecurity services for individuals and small businesses.</p>
+            </section>
+
+            <!-- Services -->
+            <section id="services">
+                <h2 class="animate">Services</h2>
+                <div class="grid animate">
+                    <div class="service-card">
+                        <h3>Online Accounts & Asset Protection</h3>
+                        <ul>
+                            <li>Two-Factor Authentication (2FA) setup</li>
+                            <li>Password hardening & manager setup</li>
+                            <li>Email, social, banking accounts secured</li>
+                            <li>Privacy & account recovery configuration</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>Junk & Digital Cleanup</h3>
+                        <ul>
+                            <li>Inbox cleanup (spam & phishing)</li>
+                            <li>Data broker removal</li>
+                            <li>Email & password leak check</li>
+                            <li>Phone & device leak review</li>
+                            <li>Social profile privacy review</li>
+                            <li>Privacy guidance & ongoing tips</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>Computer Speed & Performance Optimization</h3>
+                        <ul>
+                            <li>System cleanup & startup optimization</li>
+                            <li>Software updates</li>
+                            <li>Malware & spyware scan</li>
+                            <li>Browser & cache cleanup</li>
+                            <li>Performance tuning</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>Account Security Audit & Reinforcement</h3>
+                        <ul>
+                            <li>Account audit for email, social, banking</li>
+                            <li>Password review & hardening</li>
+                            <li>Two-Factor Authentication verification</li>
+                            <li>Recovery & backup check</li>
+                            <li>Access review for unauthorized devices/apps</li>
+                            <li>Reinforcement recommendations</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>Data Broker & Digital Footprint Cleanup</h3>
+                        <ul>
+                            <li>Email leak check</li>
+                            <li>Password leak check</li>
+                            <li>Account leak review</li>
+                            <li>Data broker removal</li>
+                            <li>Phone & device leak check</li>
+                            <li>Social profile security review</li>
+                            <li>Digital footprint guidance</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="pricing-card">
-                    <h3>Devices / Computers</h3>
-                    <ul>
-                        <li>Single Device – $60</li>
-                        <li>2–3 Devices – $110</li>
-                        <li>4+ Devices – Custom Quote</li>
-                    </ul>
+            </section>
+
+            <!-- Pricing -->
+            <section id="pricing">
+                <h2 class="animate">Pricing</h2>
+                <div class="grid animate">
+                    <div class="pricing-card">
+                        <h3>Accounts / Profiles</h3>
+                        <ul>
+                            <li>Single Account / Email / Profile – $50</li>
+                            <li>2–3 Accounts / Emails / Profiles – $90</li>
+                            <li>4–5 Accounts / Emails / Profiles – $140</li>
+                            <li>6+ Accounts / Emails / Profiles – Custom Quote</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Devices / Computers</h3>
+                        <ul>
+                            <li>Single Device – $60</li>
+                            <li>2–3 Devices – $110</li>
+                            <li>4+ Devices – Custom Quote</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Contact -->
-        <section id="contact">
-            <h2 class="animate">Contact Us</h2>
-            <form id="contactForm" class="animate">
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
-                <textarea name="message" placeholder="Message / Service Request" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-            <p>Email: info@blackvector.com | Phone: (XXX) XXX-XXXX</p>
-        </section>
-    </main>
+            <!-- Contact -->
+            <section id="contact">
+                <h2 class="animate">Contact Us</h2>
+                <form id="contactForm" class="animate">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <textarea name="message" placeholder="Message / Service Request" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                <p>Email: info@blackvector.com | Phone: (XXX) XXX-XXXX</p>
+            </section>
+        </main>
 
-    <footer>
-        <p>BlackVector Cybersecurity | Protecting Your Digital Life | &copy; 2026</p>
-    </footer>
+        <footer>
+            <p>BlackVector Cybersecurity | Protecting Your Digital Life | &copy; 2026</p>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
