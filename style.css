@@ -34,10 +34,7 @@ body, html {
     animation: spin 1s linear infinite;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+@keyframes spin { 0%{transform:rotate(0deg);}100%{transform:rotate(360deg);} }
 
 .hidden { display: none; }
 
@@ -57,11 +54,15 @@ header {
     align-items: center;
     gap: 20px;
     padding: 20px 5%;
+    flex-wrap: wrap;
 }
 
 .logo-img {
     width: 100px;
     height: auto;
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 .header-text h1 {
@@ -75,7 +76,7 @@ header {
     line-height: 1.4;
 }
 
-/* Main Content */
+/* Main content */
 main {
     width: 90%;
     max-width: 1200px;
@@ -84,17 +85,17 @@ main {
 
 /* Services */
 .service-card {
-    border: 1px solid #fff;
-    border-radius: 10px;
+    border: 2px solid #fff;
+    border-radius: 12px;
     padding: 20px;
     margin-bottom: 25px;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.6);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .service-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    box-shadow: 0 0 20px rgba(255,255,255,0.4);
 }
 
 .service-card h3 {
@@ -105,11 +106,54 @@ main {
 ul { list-style: decimal inside; }
 li { margin-bottom: 5px; }
 
+/* Contact Card */
+.contact-card {
+    border: 2px solid #fff;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.6);
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+}
+
+form input::placeholder, form textarea::placeholder { color: #ccc; }
+
+form button {
+    padding: 12px;
+    border-radius: 6px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+form button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
 /* Footer */
-footer {
+.footer-card {
+    border-top: 2px solid #fff;
+    padding: 15px 0;
     text-align: center;
-    padding: 20px 0;
-    border-top: 1px solid #fff;
+    margin-top: 20px;
 }
 
 /* Animations */
@@ -119,18 +163,10 @@ footer {
     animation: fadeInUp 1s forwards;
 }
 
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+@keyframes fadeInUp { to { opacity:1; transform:translateY(0); } }
 
-@media (max-width: 900px){
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
+@media (max-width:900px){
+    header { flex-direction: column; text-align: center; }
     .header-text p { max-width: 100%; }
 }
 
