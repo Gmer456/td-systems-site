@@ -4,80 +4,107 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BlackVector Cybersecurity</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Primary stylesheet -->
+  <link rel="stylesheet" href="/src/css/style.css">
+
+  <!-- Optional: favicons / theme colour -->
+  <link rel="icon" href="/public/assets/favicon.ico" type="image/x-icon">
+  <meta name="theme-color" content="#0d0d0d">
 </head>
+
 <body>
-  <!-- Header with logo, business name, and description -->
-  <header>
-    <img src="assets/logo.png" alt="BlackVector Logo" class="logo">
+  <!-- ==== HEADER ==== -->
+  <header class="site-header">
+    <img src="/public/assets/logo.png"
+         alt="BlackVector logo"
+         class="logo">
+
     <div class="header-text">
       <h1 class="business-name">BlackVector Cybersecurity</h1>
-      <p class="business-desc">Professional cybersecurity services from young-minded students preparing for the U.S. Military Cyber Division. Specializing in red and blue team roles, we bring expert services directly to you before deployment.</p>
+      <p class="business-desc">
+        Professional cybersecurity services from young‑minded students preparing for the U.S. Military Cyber Division.
+        Specializing in red‑ and blue‑team roles, we bring expert services directly to you before deployment.
+      </p>
     </div>
   </header>
 
-  <!-- Services -->
-  <main class="container">
-    <div class="service">
-      <img src="assets/service1.png" alt="Device Optimization">
-      <h2>Device & Performance Optimization</h2>
+  <!-- ==== SERVICES ==== -->
+  <main class="container" aria-label="Our services">
+    <section class="service" aria-labelledby="svc-opt">
+      <img src="/public/assets/service1.png" alt="">
+      <h2 id="svc-opt">Device &amp; Performance Optimization</h2>
       <ul>
-        <li>System Cleanup – Remove temporary/junk files</li>
-        <li>Startup Optimization – Reduce boot time</li>
-        <li>Software Updates – Keep OS/software updated</li>
-        <li>Malware & Spyware Scan – Detect and remove threats</li>
-        <li>Browser & Cache Cleanup</li>
-        <li>Performance Tuning</li>
+        <li>System cleanup – remove temporary/junk files</li>
+        <li>Startup optimization – reduce boot time</li>
+        <li>Software updates – keep OS/software up‑to‑date</li>
+        <li>Malware &amp; spyware scan – detect and remove threats</li>
+        <li>Browser &amp; cache cleanup</li>
+        <li>Performance tuning</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="service">
-      <img src="assets/service2.png" alt="Account Security Audit">
-      <h2>Account Security Audit & Reinforcement</h2>
+    <section class="service" aria-labelledby="svc-audit">
+      <img src="/public/assets/service2.png" alt="">
+      <h2 id="svc-audit">Account Security Audit &amp; Reinforcement</h2>
       <ul>
-        <li>Account Audit – Check all online accounts</li>
-        <li>Password Review & Hardening</li>
-        <li>Two-Factor Authentication (2FA)</li>
-        <li>Recovery & Backup Check</li>
-        <li>Access Review</li>
-        <li>Reinforcement Recommendations</li>
+        <li>Account audit – check all online accounts</li>
+        <li>Password review &amp; hardening</li>
+        <li>Two‑factor authentication (2FA)</li>
+        <li>Recovery &amp; backup check</li>
+        <li>Access review</li>
+        <li>Reinforcement recommendations</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="service">
-      <img src="assets/service3.png" alt="Data Footprint Cleanup">
-      <h2>Data Broker & Digital Footprint Cleanup</h2>
+    <section class="service" aria-labelledby="svc-footprint">
+      <img src="/public/assets/service3.png" alt="">
+      <h2 id="svc-footprint">Data Broker &amp; Digital Footprint Cleanup</h2>
       <ul>
-        <li>Email Leak Check</li>
-        <li>Password Leak Check</li>
-        <li>Account Leak Review</li>
-        <li>Data Broker Removal</li>
-        <li>Phone & Device Leak Check</li>
-        <li>Social Profile Security Review</li>
-        <li>Digital Footprint Guidance</li>
+        <li>Email leak check</li>
+        <li>Password leak check</li>
+        <li>Account leak review</li>
+        <li>Data broker removal</li>
+        <li>Phone &amp; device leak check</li>
+        <li>Social profile security review</li>
+        <li>Digital footprint guidance</li>
       </ul>
-    </div>
+    </section>
   </main>
 
-  <!-- Contact Us -->
-  <section class="contact">
-    <h2>Contact Us</h2>
+  <!-- ==== CONTACT ==== -->
+  <section class="contact" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Contact Us</h2>
+
     <p>Email: <a href="mailto:info@blackvector.com">info@blackvector.com</a></p>
-    <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-    <p>Or reach out via our online form below:</p>
-    <form>
-      <input type="text" placeholder="Name" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Message" required></textarea>
+    <p>Phone: <a href="tel:+1234567890">+1 (234) 567‑890</a></p>
+
+    <form action="#" method="POST" novalidate>
+      <label>
+        <span class="visually-hidden">Name</span>
+        <input type="text" name="name" placeholder="Name" required>
+      </label>
+
+      <label>
+        <span class="visually-hidden">Email</span>
+        <input type="email" name="email" placeholder="Email" required>
+      </label>
+
+      <label>
+        <span class="visually-hidden">Message</span>
+        <textarea name="message" rows="4" placeholder="Message" required></textarea>
+      </label>
+
       <button type="submit">Send Message</button>
     </form>
   </section>
 
-  <!-- Footer -->
+  <!-- ==== FOOTER ==== -->
   <footer>
     &copy; 2026 BlackVector Cybersecurity. All rights reserved.
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Optional: custom script (currently empty) -->
+  <script src="/src/js/script.js"></script>
 </body>
 </html>
