@@ -1,5 +1,11 @@
-// Loader
-window.addEventListener("load", function(){ document.getElementById('loader').style.display='none'; document.getElementById('mainContent').classList.remove('hidden'); });
+// Remove loader after 1 second regardless
+window.addEventListener("load", function(){
+    setTimeout(() => {
+        document.getElementById('loader').style.display = 'none';
+        document.getElementById('mainContent').classList.remove('hidden');
+    }, 800);
+});
+
 
 
 // Scroll animations
@@ -29,11 +35,4 @@ requestAnimationFrame(drawGrid);
 drawGrid();
 window.addEventListener('resize',()=>{ canvas.width=window.innerWidth; canvas.height=window.innerHeight; });
 
-// Remove loader after 1 second regardless
-window.addEventListener("load", function(){
-    setTimeout(() => {
-        document.getElementById('loader').style.display = 'none';
-        document.getElementById('mainContent').classList.remove('hidden');
-    }, 800);
-});
 
