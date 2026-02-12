@@ -6,13 +6,6 @@ window.addEventListener("load", function(){
     main.classList.remove('hidden');
 });
 
-// Contact Form Submission
-document.getElementById('contactForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    alert('Thank you! Your message has been sent.');
-    this.reset();
-});
-
 // Scroll animation
 const animatedElements = document.querySelectorAll('.animate');
 const observer = new IntersectionObserver(entries => {
