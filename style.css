@@ -1,218 +1,137 @@
-/* ==============================================================
-   Global reset & typography
-   ============================================================== */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+/* Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
 }
-html { scroll-behavior: smooth; }
+
 body {
-    font-family: 'Inter', sans-serif;
+    background-color: #0D0D0D;
+    color: #fff;
     line-height: 1.6;
-    background: #111;
-    color: #eee;
 }
 
-/* ==============================================================
-   Layout helpers
-   ============================================================== */
-.container {
-    width: min(90%, 1200px);
-    margin: 0 auto;
-    padding: 2rem 0;
-}
-.section { padding: 4rem 0; text-align: center; }
-
-/* ==============================================================
-   Header / Nav
-   ============================================================== */
 header {
-    position: sticky;
-    top: 0;
-    background: #000;
-    border-bottom: 2px solid #c00;
-    z-index: 1000;
-}
-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 50px;
+    background-color: #111;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-.logo {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #c00;
-    text-decoration: none;
-}
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color .2s;
-}
-.nav-links a:hover { color: #c00; }
 
-/* ==============================================================
-   Hero
-   ============================================================== */
-.hero-section {
-    /* You can swap the URL for a local file: url('assets/hero-bg.jpg') */
-    background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1500&q=80')
-                center/cover no-repeat;
-    color: #fff;
-    height: 85vh;
+header nav a {
+    color: #6A00FF;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+.hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-shadow: 0 2px 4px rgba(0,0,0,.6);
+    text-align: center;
+    padding: 150px 20px;
+    background: linear-gradient(90deg, #6A00FF 0%, #00C2FF 100%);
+    color: #fff;
 }
-.hero-section h1 { font-size: 3rem; }
-.hero-section p { font-size: 1.25rem; margin: 1rem 0; }
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
 
 .btn-primary {
-    background: #c00;
-    color: #fff;
-    padding: .75rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    font-weight: 600;
-    cursor: pointer;
+    padding: 15px 30px;
+    background-color: #00C2FF;
+    color: #0D0D0D;
     text-decoration: none;
-    transition: background .2s;
-}
-.btn-primary:hover { background: #a00; }
-
-/* ==============================================================
-   About
-   ============================================================== */
-.about-section { background: #222; }
-
-/* ==============================================================
-   Card grids (services, pricing, testimonials)
-   ============================================================== */
-.cards,
-.price-cards,
-.testimonial-cards {
-    display: grid;
-    gap: 1.5rem;
-}
-.cards { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-.price-cards { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-.testimonial-cards { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-
-.card,
-.price-card,
-.testimonial {
-    background: #111;
-    border: 1px solid #333;
+    font-weight: bold;
     border-radius: 8px;
-    padding: 1.5rem;
-    transition: transform .3s, box-shadow .3s;
-}
-.card:hover,
-.price-card:hover,
-.testimonial:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,.4);
+    margin-top: 20px;
+    transition: 0.3s;
 }
 
-/* Service cards */
-.card h3 { margin-bottom: .5rem; color: #c00; }
-
-/* Pricing cards */
-.price-card.featured {
-    border-color: #c00;
-    background: #1a1a1a;
-}
-.price-card .price {
-    font-size: 2rem;
-    margin: .75rem 0;
-    color: #fff;
-}
-.price-card .price span { font-size: .6em; color: #aaa; }
-.price-card ul { list-style: none; margin: 1rem 0; }
-.price-card li { margin: .4rem 0; }
-
-.btn-secondary {
-    display: inline-block;
-    margin-top: .5rem;
-    padding: .5rem 1rem;
-    border: 2px solid #c00;
-    color: #c00;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background .2s, color .2s;
-}
-.btn-secondary:hover {
-    background: #c00;
+.btn-primary:hover {
+    background-color: #6A00FF;
     color: #fff;
 }
 
-/* ==============================================================
-   Contact form
-   ============================================================== */
-.contact-section form {
-    max-width: 600px;
+section {
+    padding: 80px 20px;
+    max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    gap: 1rem;
-}
-.contact-section input,
-.contact-section textarea {
-    width: 100%;
-    padding: .75rem;
-    border: 1px solid #444;
-    border-radius: 4px;
-    background: #222;
-    color: #eee;
 }
 
-/* ==============================================================
-   Footer
-   ============================================================== */
-.footer {
-    background: #000;
-    color: #777;
+h2 {
+    font-size: 2.2em;
+    color: #6A00FF;
+    margin-bottom: 40px;
     text-align: center;
-    padding: 1rem 0;
-    border-top: 2px solid #c00;
 }
 
-/* ==============================================================
-   Fade‑in animation (triggered via JS)
-   ============================================================== */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 0.8s forwards;
-    animation-play-state: paused;   /* will be started by IntersectionObserver */
-}
-.delay-1 { animation-delay: 0.2s; }
-.delay-2 { animation-delay: 0.4s; }
-.delay-3 { animation-delay: 0.6s; }
-.delay-4 { animation-delay: 0.8s; }
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.services-container, .pricing-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 
-/* ==============================================================
-   Responsive tweaks
-   ============================================================== */
-@media (max-width: 768px) {
-    .hero-section h1 { font-size: 2.2rem; }
-    .nav-links { display: none; }   /* simple demo – you could add a burger menu later */
+.service-card, .pricing-card {
+    background-color: #111;
+    border: 2px solid #6A00FF;
+    border-radius: 12px;
+    padding: 25px;
+    transition: transform 0.3s, border-color 0.3s;
 }
+
+.service-card:hover, .pricing-card:hover {
+    transform: translateY(-5px);
+    border-color: #00C2FF;
+}
+
+.service-card h3, .pricing-card h3 {
+    color: #00C2FF;
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    border-top: 1px solid #6A00FF;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: none;
+}
+
+form button {
+    padding: 15px;
+    background-color: #6A00FF;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #00C2FF;
+    color: #0D0D0D;
+}
+
