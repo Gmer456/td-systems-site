@@ -1,87 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BlackVector Cybersecurity</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackVector Cybersecurity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- Loader -->
-<div id="loader">
-<div class="spinner"></div>
-</div>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
 
+    <!-- Animated Background -->
+    <canvas id="bgCanvas"></canvas>
 
-<!-- Background Canvas -->
-<canvas id="bgCanvas"></canvas>
+    <!-- Main Content -->
+    <div id="mainContent" class="hidden">
+        <!-- Header -->
+        <header>
+            <img src="assets/logo.png" alt="BlackVector Logo" class="header-logo">
+            <p class="header-desc">
+                BlackVector Cybersecurity provides expert services from ambitious students preparing to join the U.S. Military Cyber Division. Leveraging their knowledge in red and blue team operations, they bring cutting-edge cybersecurity solutions directly to you before officially serving, ensuring high-quality protection for your digital life.
+            </p>
+        </header>
 
+        <main>
+            <!-- Services -->
+            <section id="services">
+                <h2 class="animate">Our Services</h2>
+                <div class="service-grid">
+                    <!-- Device & Performance Optimization -->
+                    <div class="service-card animate">
+                        <img src="assets/service1.png" alt="Device Optimization">
+                        <h3>Device & Performance Optimization</h3>
+                        <p>Improve your computer’s speed, responsiveness, and overall performance to make it run like new.</p>
+                        <ul>
+                            <li>System Cleanup – Remove temporary files, junk files, and unnecessary applications.</li>
+                            <li>Startup Optimization – Reduce boot times by disabling unnecessary startup programs.</li>
+                            <li>Software Updates – Keep OS and key software updated.</li>
+                            <li>Malware & Spyware Scan – Detect and remove malware or spyware.</li>
+                            <li>Browser & Cache Cleanup – Clear cache, cookies, and extensions.</li>
+                            <li>Performance Tuning – Adjust system settings for optimal speed.</li>
+                        </ul>
+                    </div>
 
-<div id="mainContent" class="hidden">
-<!-- Header -->
-<header>
-<img src="assets/logo.png" alt="BlackVector Logo" class="header-logo">
-<p>
-BlackVector Cybersecurity provides expert services from ambitious students preparing to join the U.S. Military Cyber Division. Leveraging their knowledge in red and blue team operations, they bring cutting-edge cybersecurity solutions directly to you before officially serving, ensuring high-quality protection for your digital life.
-</p>
-</header>
+                    <!-- Account Security Audit -->
+                    <div class="service-card animate">
+                        <img src="assets/service2.png" alt="Account Security">
+                        <h3>Account Security Audit & Reinforcement</h3>
+                        <p>Review and strengthen your digital accounts to prevent unauthorized access.</p>
+                        <ul>
+                            <li>Account Audit – Email, social media, financial account review.</li>
+                            <li>Password Review & Hardening – Improve weak or reused passwords.</li>
+                            <li>Two-Factor Authentication (2FA) – Verify or enable 2FA for accounts.</li>
+                            <li>Recovery & Backup Check – Ensure recovery options are configured.</li>
+                            <li>Access Review – Remove unauthorized devices or apps.</li>
+                            <li>Reinforcement Recommendations – Ongoing security guidance.</li>
+                        </ul>
+                    </div>
 
+                    <!-- Data Broker & Digital Footprint Cleanup -->
+                    <div class="service-card animate">
+                        <img src="assets/service3.png" alt="Data Cleanup">
+                        <h3>Data Broker & Digital Footprint Cleanup</h3>
+                        <p>Protect your personal information from exposure and remove your data from unwanted sources.</p>
+                        <ul>
+                            <li>Email Leak Check – Detect compromised emails.</li>
+                            <li>Password Leak Check – Identify exposed or weak passwords.</li>
+                            <li>Account Leak Review – Find breached accounts online.</li>
+                            <li>Data Broker Removal – Remove info from marketing lists and public databases.</li>
+                            <li>Phone & Device Leak Check – Review exposed numbers and devices.</li>
+                            <li>Social Profile Security Review – Analyze privacy and security risks.</li>
+                            <li>Digital Footprint Guidance – Steps to maintain privacy.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
-<main>
-<!-- Services -->
-<section id="services">
-<h2 class="animate">Our Services</h2>
-<div class="service-grid">
-<!-- Device & Performance Optimization -->
-<div class="service-card animate">
-<img src="assets/service1.png" alt="Device Optimization">
-<h3>Device & Performance Optimization</h3>
-<p>Improve your computer’s speed, responsiveness, and overall performance to make it run like new.</p>
-<strong>Services Included:</strong>
-<ul>
-<li>System Cleanup – Remove temporary files, junk files, and unnecessary applications.</li>
-<li>Startup Optimization – Reduce boot times by disabling unnecessary startup programs.</li>
-<li>Software Updates – Keep OS and key software updated.</li>
-<li>Malware & Spyware Scan – Detect and remove malware or spyware.</li>
-<li>Browser & Cache Cleanup – Clear cache, cookies, and extensions.</li>
-<li>Performance Tuning – Adjust system settings for optimal speed.</li>
-</ul>
-</div>
+            <!-- Contact Section -->
+            <section id="contact">
+                <h2 class="animate">Contact Us</h2>
+                <div class="contact-card animate">
+                    <form id="contactForm">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                        <textarea name="message" placeholder="Message / Service Request" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                    <p>Email: info@blackvector.com | Phone: (XXX) XXX‑XXXX</p>
+                </div>
+            </section>
+        </main>
 
+        <footer class="footer-card">
+            <p>BlackVector Cybersecurity | Protecting Your Digital Life | &copy; 2026</p>
+        </footer>
+    </div>
 
-<!-- Account Security Audit & Reinforcement -->
-<div class="service-card animate">
-<img src="assets/service2.png" alt="Account Security">
-<h3>Account Security Audit & Reinforcement</h3>
-<p>Review and strengthen your digital accounts to prevent unauthorized access.</p>
-<strong>Services Included:</strong>
-<ul>
-<li>Account Audit – Email, social media, financial account review.</li>
-<li>Password Review & Hardening – Improve weak or reused passwords.</li>
-<li>Two-Factor Authentication (2FA) – Verify or enable 2FA for accounts.</li>
-<li>Recovery & Backup Check – Ensure recovery options are configured.</li>
-<li>Access Review – Remove unauthorized devices or apps.</li>
-<li>Reinforcement Recommendations – Ongoing security guidance.</li>
-</ul>
-</div>
-
-
-<!-- Data Broker & Digital Footprint Cleanup -->
-<div class="service-card animate">
-<img src="assets/service3.png" alt="Data Cleanup">
-<h3>Data Broker & Digital Footprint Cleanup</h3>
-<p>Protect your personal information from exposure and remove your data from unwanted sources.</p>
-<strong>Services Included:</strong>
-<ul>
-<li>Email Leak Check – Detect compromised emails.</li>
-<li>Password Leak Check – Identify exposed or weak passwords.</li>
-<li>Account Leak Review – Find breached accounts online.</li>
-<li>Data Broker Removal – Remove info from marketing lists and public databases.</li>
-<li>Phone & Device Leak Check – Review exposed numbers and devices.</li>
-<li>Social Profile Security Review – Analyze privacy and security risks.</li>
-<li>Digital Footprint Guidance – Steps to maintain privacy.</li>
-</ul>
-</div>
-</div>
+    <script src="script.js"></script>
+</body>
 </html>
