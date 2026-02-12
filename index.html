@@ -18,7 +18,7 @@
 
     <!-- Main Content -->
     <div id="mainContent" class="hidden">
-        <!-- Header: Logo Left, Name+Description Right -->
+        <!-- Header -->
         <header>
             <div class="header-container">
                 <img src="assets/logo.png" alt="BlackVector Logo" class="logo-img">
@@ -80,10 +80,23 @@
                     </ul>
                 </div>
             </section>
+
+            <!-- Contact Section -->
+            <section id="contact">
+                <h2 class="animate">Contact Us</h2>
+                <div class="contact-card animate">
+                    <form id="contactForm">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                        <textarea name="message" placeholder="Message / Service Request" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                    <p>Email: info@blackvector.com | Phone: (XXX) XXX-XXXX</p>
+                </div>
+            </section>
         </main>
 
-        <!-- Footer -->
-        <footer>
+        <footer class="footer-card">
             <p>BlackVector Cybersecurity | Protecting Your Digital Life | &copy; 2026</p>
         </footer>
     </div>
