@@ -7,53 +7,126 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="assets/logo.png" alt="BlackVector Logo">
-        </div>
-        <nav>
-            <a href="#services">Services</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <div class="container">
 
-    <section class="hero">
-        <h1>BlackVector Cybersecurity</h1>
-        <p>Protecting Your Digital Life</p>
-        <a href="#contact" class="btn-primary">Get Secured Today</a>
-    </section>
+        <!-- Header -->
+        <header>
+            <img src="assets/logo.png" alt="BlackVector Logo" class="logo-img">
+            <h1>BlackVector Cybersecurity</h1>
+        </header>
 
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="services-container" id="services-container">
-            <!-- Services will be dynamically loaded from services.json -->
-        </div>
-    </section>
+        <!-- Business Description -->
+        <section class="description">
+            <p>BlackVector protects your digital life. We secure accounts, clean inboxes, remove data leaks, optimize computers, and safeguard your personal information. Professional, fast, and affordable cybersecurity services for individuals and small businesses.</p>
+        </section>
 
-    <section id="pricing" class="pricing">
-        <h2>Pricing</h2>
-        <div class="pricing-container" id="pricing-container">
-            <!-- Pricing will be dynamically loaded from services.json -->
-        </div>
-    </section>
+        <!-- Services -->
+        <section class="services">
+            <h2>Services</h2>
 
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form id="contactForm">
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email Address" required>
-            <textarea name="message" placeholder="Message / Service Request" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        <p>Email: info@blackvector.com | Phone: (XXX) XXX-XXXX</p>
-    </section>
+            <div class="service-card">
+                <h3>1. Online Accounts & Asset Protection</h3>
+                <ul>
+                    <li>Two-Factor Authentication (2FA) setup</li>
+                    <li>Password hardening & manager setup</li>
+                    <li>Email, social, banking accounts secured</li>
+                    <li>Privacy & account recovery configuration</li>
+                </ul>
+            </div>
 
-    <footer>
-        <p>BlackVector Cybersecurity | Protecting Your Digital Life | &copy; 2026</p>
-    </footer>
+            <div class="service-card">
+                <h3>2. Junk & Digital Cleanup</h3>
+                <ul>
+                    <li>Inbox cleanup (spam & phishing)</li>
+                    <li>Data broker removal</li>
+                    <li>Email & password leak check</li>
+                    <li>Phone & device leak review</li>
+                    <li>Social profile privacy review</li>
+                    <li>Privacy guidance & ongoing tips</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>3. Computer Speed & Performance Optimization</h3>
+                <ul>
+                    <li>System cleanup & startup optimization</li>
+                    <li>Software updates</li>
+                    <li>Malware & spyware scan</li>
+                    <li>Browser & cache cleanup</li>
+                    <li>Performance tuning</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>4. Account Security Audit & Reinforcement</h3>
+                <ul>
+                    <li>Account audit for email, social, banking</li>
+                    <li>Password review & hardening</li>
+                    <li>Two-Factor Authentication verification</li>
+                    <li>Recovery & backup check</li>
+                    <li>Access review for unauthorized devices/apps</li>
+                    <li>Reinforcement recommendations</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>5. Data Broker & Digital Footprint Cleanup</h3>
+                <ul>
+                    <li>Email leak check</li>
+                    <li>Password leak check</li>
+                    <li>Account leak review</li>
+                    <li>Data broker removal</li>
+                    <li>Phone & device leak check</li>
+                    <li>Social profile security review</li>
+                    <li>Digital footprint guidance</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- Pricing -->
+        <section class="pricing">
+            <h2>Pricing</h2>
+
+            <div class="pricing-card">
+                <h3>Accounts / Profiles</h3>
+                <ul>
+                    <li>Single Account / Email / Profile – $50</li>
+                    <li>2–3 Accounts / Emails / Profiles – $90</li>
+                    <li>4–5 Accounts / Emails / Profiles – $140</li>
+                    <li>6+ Accounts / Emails / Profiles – Custom Quote</li>
+                </ul>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Devices / Computers</h3>
+                <ul>
+                    <li>Single Device – $60</li>
+                    <li>2–3 Devices – $110</li>
+                    <li>4+ Devices – Custom Quote</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <textarea name="message" placeholder="Message / Service Request" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p>Email: info@blackvector.com | Phone: (XXX) XXX-XXXX</p>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>BlackVector Cybersecurity | Protecting Your Digital Life | &copy; 2026</p>
+        </footer>
+
+    </div>
 
     <script src="script.js"></script>
 </body>
 </html>
-
