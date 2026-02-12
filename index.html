@@ -2,172 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Shadowall – Cybersecurity Services</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Inter font (free, lightweight) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-          rel="stylesheet">
-    <!-- Link to our stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackVector Cybersecurity</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="BlackVector Logo">
+        </div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-<header id="header">
-    <nav class="container">
-        <a href="#" class="logo">Shadowall</a>
-        <ul class="nav-links">
-            <li><a href="#services">Services</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <section class="hero">
+        <h1>BlackVector Cybersecurity</h1>
+        <p>Protecting Your Digital Life</p>
+        <a href="#contact" class="btn-primary">Get Secured Today</a>
+    </section>
 
-<main>
-
-    <!-- HERO -->
-    <section id="hero" class="section hero-section">
-        <div class="container">
-            <h1 class="fade-in">Protect Your Digital World</h1>
-            <p class="fade-in delay-1">
-                Advanced cybersecurity solutions for businesses of any size.
-            </p>
-            <a href="#contact" class="btn-primary fade-in delay-2">
-                Get a Free Consultation
-            </a>
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="services-container" id="services-container">
+            <!-- Services will be dynamically loaded from services.json -->
         </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section about-section">
-        <div class="container">
-            <h2 class="fade-in">Who We Are</h2>
-            <p class="fade-in delay-1">
-                Shadowall is a boutique cybersecurity firm specializing in threat detection,
-                incident response, and security architecture. Our team blends years of
-                experience with cutting‑edge technology to keep your assets safe.
-            </p>
+    <section id="pricing" class="pricing">
+        <h2>Pricing</h2>
+        <div class="pricing-container" id="pricing-container">
+            <!-- Pricing will be dynamically loaded from services.json -->
         </div>
     </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="section services-section">
-        <div class="container">
-            <h2 class="fade-in">Our Services</h2>
-            <div class="cards">
-
-                <article class="card fade-in delay-1">
-                    <h3>Vulnerability Assessment</h3>
-                    <p>Identify weaknesses before attackers do.</p>
-                </article>
-
-                <article class="card fade-in delay-2">
-                    <h3>Penetration Testing</h3>
-                    <p>Real‑world attack simulations to validate defenses.</p>
-                </article>
-
-                <article class="card fade-in delay-3">
-                    <h3>Managed Detection & Response (MDR)</h3>
-                    <p>24/7 monitoring and rapid incident containment.</p>
-                </article>
-
-                <article class="card fade-in delay-4">
-                    <h3>Security Architecture Design</h3>
-                    <p>Build secure foundations for new projects.</p>
-                </article>
-
-            </div>
-        </div>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <textarea name="message" placeholder="Message / Service Request" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p>Email: info@blackvector.com | Phone: (XXX) XXX-XXXX</p>
     </section>
 
-    <!-- PRICING -->
-    <section id="pricing" class="section pricing-section">
-        <div class="container">
-            <h2 class="fade-in">Pricing Plans</h2>
-            <div class="price-cards">
+    <footer>
+        <p>BlackVector Cybersecurity | Protecting Your Digital Life | &copy; 2026</p>
+    </footer>
 
-                <article class="price-card fade-in delay-1">
-                    <h3>Starter</h3>
-                    <p class="price">$499<span>/project</span></p>
-                    <ul>
-                        <li>Vulnerability Scan</li>
-                        <li>Basic Report</li>
-                        <li>Email Support</li>
-                    </ul>
-                    <a href="#contact" class="btn-secondary">Choose</a>
-                </article>
-
-                <article class="price-card featured fade-in delay-2">
-                    <h3>Professional</h3>
-                    <p class="price">$1,299<span>/project</span></p>
-                    <ul>
-                        <li>Full Pen‑Test</li>
-                        <li>Detailed Remediation Guide</li>
-                        <li>Phone & Email Support</li>
-                        <li>30‑day Follow‑up</li>
-                    </ul>
-                    <a href="#contact" class="btn-secondary">Choose</a>
-                </article>
-
-                <article class="price-card fade-in delay-3">
-                    <h3>Enterprise</h3>
-                    <p class="price">Custom<span>/quote</span></p>
-                    <ul>
-                        <li>Managed Detection & Response</li>
-                        <li>Security Architecture Consulting</li>
-                        <li>Dedicated Account Manager</li>
-                        <li>On‑site Training</li>
-                    </ul>
-                    <a href="#contact" class="btn-secondary">Contact Us</a>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section id="testimonials" class="section testimonials-section">
-        <div class="container">
-            <h2 class="fade-in">What Clients Say</h2>
-            <div class="testimonial-cards">
-
-                <article class="testimonial fade-in delay-1">
-                    <p>"Shadowall uncovered critical gaps we never knew existed. Their response time was lightning fast."</p>
-                    <cite>— Alex M., CTO, FinTechCo</cite>
-                </article>
-
-                <article class="testimonial fade-in delay-2">
-                    <p>"Their MDR service gives us peace of mind 24/7. Highly recommended."</p>
-                    <cite>— Priya R., IT Director, HealthSecure</cite>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <h2 class="fade-in">Get In Touch</h2>
-            <form id="contact-form" class="fade-in delay-1">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
-                <textarea name="message" rows="4"
-                          placeholder="How can we help?" required></textarea>
-                <button type="submit" class="btn-primary">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-</main>
-
-<footer class="footer">
-    <div class="container">
-        <p>&copy; 2026 Shadowall – All Rights Reserved.</p>
-        <p>Designed with ❤️ by Shadowall.</p>
-    </div>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
